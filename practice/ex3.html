@@ -4,7 +4,18 @@
         <title>Seonghwan's anything</title>
         <meta charset="utf-8">
         <style>
-            
+            #name{ /*id는 하나만 존재한다. 좁음.*/
+                font-weight: bold;
+                color: aquamarine;
+            }
+            .hometown{/*class는 여러개를 포함시킨다. 더 광범위함.*/
+                font-weight: bold;
+                color:blueviolet;
+            }
+            span{ /* id >>>> class >>>> 나머지들... */
+                color: brown;
+                font-weight: bold;
+            }
         </style>
            
     </head>
@@ -12,14 +23,6 @@
     <body style="background-color: white; color:black;">
         <h1><a href="index.html">Seonghwan's Home</a></h1>
         
-        <input type="button" value="night" onclick="
-        document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='white';
-        ">
-        <input type="button" value="day" onclick="
-        document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black';
-        ">
         <div id="grid">
             <ul>
                 <li><a href="1.html">소개</a></li>
@@ -28,7 +31,10 @@
                 <li><a href="https://www.instagram.com/tlatjdghks/" target="_blank" title="Seonghwan's instagram">Instagram</a></li>
             </ul>
             <div id="article">
-                <h2>Anything</h2>
+                <h2 style="color: powderblue; background-color: coral; width: 105px;">Anything</h2>
+                <p>
+                    My name is <span id="name">Seonghwan Sim</span> and I am 24 years old. I am from <span class="hometown">Pohang, Korean</span>. I love traveling. Especially, I like <span>Jeju Island</span>.
+                </p>
             </div>
         </div>
         
