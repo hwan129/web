@@ -11,22 +11,16 @@
     
     <body>
         <h1><a href="index.html">Seonghwan's Home</a></h1>
-        <input type="button" value="night" onclick="
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-        ">
-        <input type="button" value="day" onclick="
-        document.querySelector('body').style.backgroundColor = 'white';
-        document.querySelector('body').style.color = 'black';
-        ">
+         
         <input type="button" value="Night" onclick="
-        if(document.querySelector('body').style.backgroundColor == 'white'){ // 배경이 흰색일 때
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
+        var target = document.querySelector('body');
+        if(value == 'Night'){ // 배경이 black일 때
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
             value = 'Day';
-        } else{ // 배경이 검정
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
+        } else{ // 배경이 white
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
             value = 'Night';
         }
         ">
