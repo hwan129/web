@@ -16,10 +16,22 @@
                 overflow: hidden;
                 object-fit: cover;
             }
+            #name{
+                
+            }
             .grid1{
                 display: grid;
-                text-align: center;
                 grid-template-columns: 175px 1fr;
+                padding-bottom: 15px;
+                border-bottom:1px solid #bdbdbd;
+            }
+            .grid2{
+                padding-left: 80px; /*tbody에서는 왜 안되나*/
+                table-layout: fixed;    /*얘는 어디다 넣어야하나. table 비율 맞추고 싶음*/
+                
+            }
+            tbody{
+                text-align: left;
             }
             .grid3{
                 vertical-align: bottom;
@@ -34,19 +46,30 @@
         <div class="grid1">
             <img src="gwanganri.jpg" id="me">
             <table class="grid2">
-                <tr class="grid3">
-                    <td><a href="https://www.instagram.com/tlatjdghks/"  title="Seonghwan's instagram">심성환</a></td>
-                    <td>23</td>
-                    <td>ISFP</td>
-                </tr>
-                <tr class="grid4">
-                    <td>이름</td>
-                    <td>나이</td>
-                    <td>MBTI</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td id="name"><a href="https://www.instagram.com/tlatjdghks/"  title="Seonghwan's instagram">심성환</a></td>
+                    </tr>
+                    <tr class="grid3">
+                        <td>전산심화</td>
+                        <td>24</td>
+                        <td>ISFP</td>
+                        <td>5학기</td>
+                    </tr>
+                    <tr class="grid4">
+                        <td>전공</td>
+                        <td>나이</td>
+                        <td>MBTI</td>
+                        <td>학기</td>
+                    </tr>
+                </tbody>
             </table>
+            <table>
+                20학번 빛나는 세대&#10024
 
+            </table>
         </div>
+
         <div>
         
             <div id="article">
