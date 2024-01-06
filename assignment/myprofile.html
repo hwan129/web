@@ -1,30 +1,53 @@
 <!doctype html>
 <html>
     <head>
-        <title>Who?</title>
+        <title>Seonghwan</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css">    
         <style>
-            .img{
-                width: 150px;
-                height: 150px;
+            body{
+                padding-right: 10%;
+                padding-left: 10%;
+                padding-top: 30px;
+            }
+            #me{
+                width: 175px;
+                height: 175px;
                 border-radius: 50%;
                 overflow: hidden;
                 object-fit: cover;
+            }
+            .grid1{
+                display: grid;
+                text-align: center;
+                grid-template-columns: 175px 1fr;
+            }
+            .grid3{
+                vertical-align: bottom;
+            }
+            .grid4{
+                vertical-align: top;
             }
         </style>
     </head>
     
     <body>
-        <img src="gwanganri.jpg" class="img">
-        <h1><a href="index.html">Seonghwan's Home</a></h1>
-        <div id="grid">
-            <ul>
-                <li><a href="1.html" style="color:red; text-decoration: underline;">소개</a></li>
-                <li><a href="2.html">사진</a></li>
-                <li><a href="3.html">기타</a></li>
-                <li><a href="https://www.instagram.com/tlatjdghks/" target="_blank" title="Seonghwan's instagram">Instagram</a></li>
-            </ul>
+        <div class="grid1">
+            <img src="gwanganri.jpg" id="me">
+            <table class="grid2">
+                <tr class="grid3">
+                    <td><a href="https://www.instagram.com/tlatjdghks/"  title="Seonghwan's instagram">심성환</a></td>
+                    <td>23</td>
+                    <td>ISFP</td>
+                </tr>
+                <tr class="grid4">
+                    <td>이름</td>
+                    <td>나이</td>
+                    <td>MBTI</td>
+                </tr>
+            </table>
+
+        </div>
+        <div>
         
             <div id="article">
                 <h2>Seonghwan Sim </h2><h2>심성환</h2>
