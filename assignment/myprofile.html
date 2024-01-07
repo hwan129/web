@@ -18,7 +18,7 @@
                 font-weight: bold;
                 font-size: large;
             }
-            #profile, photos{
+            #profile{
                 width: 175px;
                 height: 175px;
                 border-radius: 50%;
@@ -59,7 +59,7 @@
             }
             .firstT, .secondT{
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-columns: repeat(4, 1fr);
             }
             .firstT div, .secondT div{
                 text-align: center;
@@ -69,7 +69,7 @@
                 grid-template-columns: 1fr 1fr;
 
                 padding-bottom: 10px;
-                border-bottom:1px solid #808080;
+                border-bottom:1px solid #bdbdbd;
                 margin-bottom: 10px;
                 padding-top: 15px;
 
@@ -80,7 +80,7 @@
             }
             .right{/*여기서 font조절 안되는 이유*/
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(2, 1fr);
                 place-items: center
             }
             .fa-instagram, .fa-github{
@@ -90,16 +90,25 @@
                 padding: 10px 15px;
                 border: 1px solid #bdbdbd;
                 border-radius: 50%;
-                box-shadow: 0 0 16px #bdbdbd;
+                box-shadow: 0 0 16px #808080;
             }
-            .photos img{
-
+            .photos, .line{
+                display: grid;
+                grid-gap: 5px;
+            }
+            .line{
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .line img{
+                width: 100%;
             }
 
-            @media(max-width:1000px){
+            @media(max-width:800px){
                 body{
-                    padding: 30px 10%;
+                    padding: 30px 10px;
                 }
+
+
                 /*밑으로 다 내리기*/
             }
             
@@ -144,7 +153,19 @@
             </div>
         </div>
         <div class="photos">
-            <img src="photo1.jpg" id="p1">
+            <div class="line">
+                <img src="photo4.jpg">
+                <img src="photo2.jpg">
+                <img src="photo3.jpg">
+            </div>
+            <div class="line">
+                <img src="photo1.jpg">
+                <img src="photo7.jpg">
+                <img src="photo6.jpg">
+            </div>
+            <div class="line">
+                <img src="photo5.jpg">
+            </div>
         </div>
         
     </body>
