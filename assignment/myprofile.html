@@ -9,20 +9,23 @@
                 table이 나을까 grid가 나을까
                 table처럼 할 때, 모든 데이터에 div를 해야하나
                 grid는 항상 해야하나
-                1000
+                body에서 black해도 int, github 안됨
+                body에서 밑줄 안됨. a에서만 됨?
             */
             body{
-                padding: 30px 20%;
+                padding: 50px 20%;
 
                 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                 font-weight: bold;
                 font-size: large;
             }
+            a{
+                text-decoration: none;
+            }
             #profile{
                 width: 175px;
                 height: 175px;
                 border-radius: 50%;
-                overflow: hidden;
                 object-fit: cover;
 
                 padding: 5px;
@@ -30,27 +33,24 @@
                 border-radius: 50%;
                 box-shadow: 0 0 16px #808080;
             }
-            #name{
+            .name{
+                vertical-align: middle;/*중앙 정렬 안됨*/
                 font-size: 40px;
-                padding-bottom: 20px;
-            }
-            a{
-                text-decoration: none;
-
             }
             .above{
                 display: grid;
                 grid-template-columns: 175px 1fr;
-                
             }
             .side{
+                display: grid;
+                grid-template-rows: repeat(2, 1fr);
                 padding-left: 80px;
             }
             .firstT{
                 vertical-align: bottom;
                 height: 30px;
             }
-            .secondT, #name div{
+            .secondT, .name div{
                 vertical-align: top;
 
                 font-family: Arial;
@@ -66,7 +66,7 @@
             }
             .below{
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(2, 1fr);
 
                 padding-bottom: 10px;
                 border-bottom:1px solid #bdbdbd;
@@ -78,15 +78,15 @@
             .left div{
                 padding-bottom: 5px;
             }
-            .right{/*여기서 font조절 안되는 이유*/
+            .right{/*여기서 font조절 안되는 이유. .insta, .github에서 함*/
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 place-items: center
             }
             .fa-instagram, .fa-github{
                 font-size: 70px;
-                color: black;
                 
+                color: black;
                 padding: 10px 15px;
                 border: 1px solid #bdbdbd;
                 border-radius: 50%;
@@ -105,7 +105,10 @@
 
             @media(max-width:800px){
                 body{
-                    padding: 30px 10px;
+                    padding: 30px;
+                }
+                .tables{
+                    
                 }
 
 
@@ -119,8 +122,8 @@
         <div class="above">
             <img src="gwanganri.jpg" id="profile">
             <div class="side">
-                <div>
-                    <div id="name">심성환<div>멋쟁이 사자처럼 12기&#129409;</div></div>
+                <div class="name">
+                    심성환<div>멋쟁이 사자처럼 12기&#129409;</div>
                 </div>
                 <div class="tables">
                     <div class="firstT">
@@ -152,6 +155,7 @@
                 <a class="fa fa-github" href="https://github.com/hwan129"></a>
             </div>
         </div>
+        <!--누르면 사진 보이게-->
         <div class="photos">
             <div class="line">
                 <img src="photo4.jpg">
