@@ -34,7 +34,8 @@
             }
             .name{/*flex. padding, margin */
                 display: flex;
-                align-items: center;
+                flex-direction: column;
+                justify-content: center;
 
                 font-size: 40px;
             }
@@ -42,10 +43,11 @@
                 display: grid;
                 grid-template-columns: 175px 1fr;
             }
-            .side{
-                display: grid;
-                grid-template-rows: repeat(2, 1fr);
-                padding-left: 80px;
+            .above img{
+                grid-row: 1/3;
+            }
+            .tables, .name{
+                padding-left: 50px;
             }
             .firstT{
                 vertical-align: bottom;
@@ -110,9 +112,26 @@
                     padding: 50px;
                 }
                 .above{
-                    display: grid;
-                    grid-template-columns: 175px 1fr;
+                    
                 }
+                .above img{
+                    grid-row: 1;
+                }
+                .tables{
+                    grid-area: 2/1/3/3;
+                }
+                .below{
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: repeat(2, 1fr);
+
+                padding-bottom: 10px;
+                border-bottom:1px solid #bdbdbd;
+                margin-bottom: 10px;
+                padding-top: 15px;
+
+                font-size: 15px;
+            }
                 
             }
             
@@ -122,23 +141,21 @@
     <body>
         <div class="above">
             <img src="gwanganri.jpg" id="profile">
-            <div class="side">
-                <div class="name">
-                    심성환<div>멋쟁이 사자처럼 12기&#129409;</div>
+            <div class="name">
+                심성환<div>멋쟁이 사자처럼 12기&#129409;</div>
+            </div>
+            <div class="tables">
+                <div class="firstT">
+                    24
+                    <div>전산심화</div>
+                    <div>5학기</div>
+                    <div>ISFP</div>
                 </div>
-                <div class="tables">
-                    <div class="firstT">
-                        24
-                        <div>전산심화</div>
-                        <div>5학기</div>
-                        <div>ISFP</div>
-                    </div>
-                    <div class="secondT">
-                        나이
-                        <div>전공</div>
-                        <div>학기</div>
-                        <div>MBTI</div>
-                    </div>
+                <div class="secondT">
+                    나이
+                    <div>전공</div>
+                    <div>학기</div>
+                    <div>MBTI</div>
                 </div>
             </div>
         </div>
