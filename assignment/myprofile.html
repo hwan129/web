@@ -7,7 +7,6 @@
         <style>
             /*
                 table이 나을까 grid가 나을까
-                table처럼 할 때, 모든 데이터에 div를 해야하나
                 grid는 항상 해야하나
                 body에서 black해도 int, github 안됨
                 body에서 밑줄 안됨. a에서만 됨?
@@ -20,7 +19,7 @@
                 font-size: large;
             }
             a{
-                text-decoration: none;
+                text-decoration: none;   /*우선순위*/
             }
             #profile{
                 width: 175px;
@@ -33,9 +32,9 @@
                 border-radius: 50%;
                 box-shadow: 0 0 16px #808080;
             }
-            .name{
-                vertical-align: middle;/*중앙 정렬 안됨*/
-                font-size: 40px;
+            .name{/*flex. padding, margin */
+                display: flex;
+                align-items: center;
             }
             .above{
                 display: grid;
@@ -78,7 +77,7 @@
             .left div{
                 padding-bottom: 5px;
             }
-            .right{/*여기서 font조절 안되는 이유. .insta, .github에서 함*/
+            .right{     /*여기서 font조절 안되는 이유. .insta, .github에서 함*/
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 place-items: center
@@ -103,16 +102,16 @@
                 width: 100%;
             }
 
-            @media(max-width:800px){
+            /*그냥 media와 media only screen and ~의 차이*/
+            @media only screen and (max-width: 1000px){
                 body{
-                    padding: 30px;
+                    padding: 50px;
                 }
-                .tables{
-                    
+                .above{
+                    display: grid;
+                    grid-template-columns: 175px 1fr;
                 }
-
-
-                /*밑으로 다 내리기*/
+                
             }
             
         </style>
@@ -123,11 +122,11 @@
             <img src="gwanganri.jpg" id="profile">
             <div class="side">
                 <div class="name">
-                    심성환<div>멋쟁이 사자처럼 12기&#129409;</div>
+                    <div>심성환<div>멋쟁이 사자처럼 12기&#129409;</div></div>
                 </div>
                 <div class="tables">
                     <div class="firstT">
-                        2학년4반
+                        24
                         <div>전산심화</div>
                         <div>5학기</div>
                         <div>ISFP</div>
